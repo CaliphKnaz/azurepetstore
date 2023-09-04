@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: caliphknazazurepetstore 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: caliphknazazurepetstore
+  template:
+    metadata:
+      labels:
+        app: caliphknazazurepetstore 
+    spec:
+      containers:
+        - name: caliphknazazurepetstore 
+          image: petstoreacrdemo.azurecr.io/caliphknazazurepetstore
+          ports:
+          - containerPort: 80
